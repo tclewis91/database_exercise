@@ -10,7 +10,7 @@ class UsersController < ApplicationController
       user = User.find(params[:id])
       render text: "#{user.first_name}, #{user.last_name}, #{user.age}"
     else
-      render text: 'User Not Found', status: 404
+      render text: 'Error: 404 User Not Found', status: 404
     end
   end
 end
