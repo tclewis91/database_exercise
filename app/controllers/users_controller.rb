@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   def index
    u = User.all
-   u.map{|user| "#{first_name}, #{last_name}, #{occupation}, #{age}"}
+  render text:
+   u.map {|user| "#{user.first_name}, #{user.last_name}, #{user.occupation}, #{user.age}"}.join("<p>")
   end
 end
