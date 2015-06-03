@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   def index
 
     # if params != nil
-      # User.where("first_name LIKE ?", "#{params[:first_name]}")
+    #   User.where("first_name LIKE ?", "#{params[:first_name]}")
       # User.select{ |first| first_name.include?'s'," #{params[:first_name]}"}
       #User.includes(:first_name).where("first.name = 's'
       #adjust jacked if else statements

@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-get'/user', to: 'users#index'
-# get'/users', id: 'users#show'
-
+get'/users', to: 'users#index'
+get'/users/:id', to: 'users#show'
+get '/users/', to: 'users#find'
+# get'/users', to: 'users#error'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
