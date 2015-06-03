@@ -1,6 +1,7 @@
 == README
 ##Description
-This program pulls out user ids from a premade database.
+-This program pulls out user ids from a premade database. So far, it can print out all of the users within the database and will pull up "Error 404" if it searches for a user that is not in the database.
+
 
 ##Setup
 -Rails g migration User
@@ -101,29 +102,3 @@ This program pulls out user ids from a premade database.
         └── stylesheets
 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
