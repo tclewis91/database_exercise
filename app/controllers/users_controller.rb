@@ -1,12 +1,16 @@
 class UsersController < ApplicationController
   def index
-    if param != nil
-      @u.select{user.first_name.split.include? == param user.first_name's'} #revamp this shit
-   @u = User.all
-  render text:
-   @u.map {|user| "#{user.first_name}, #{user.last_name}, #{user.occupation}, #{user.age}"}.join("<p><img src = 'http://rlv.zcache.com/basset_hound_puppy_postcard-r4f199e398ea2471f9d5ea03cf3c44953_vgbaq_8byvr_50.jpg'/>")
-  end
 
+    if params != nil
+      # User.where("first_name LIKE ?", "#{params[:first_name]}")
+      User.select { |first_name| first_name.include?'s'}
+    end
+
+  #  @u = User.all
+  # render text:
+  #  @u.map {|user| "#{user.first_name}, #{user.last_name}, #{user.occupation}, #{user.age}"}.join("<p><img src = 'http://rlv.zcache.com/basset_hound_puppy_postcard-r4f199e398ea2471f9d5ea03cf3c44953_vgbaq_8byvr_50.jpg'/>")
+  # end
+end
   def show
     if User.exists?(params[:id])
       user = User.find(params[:id])
