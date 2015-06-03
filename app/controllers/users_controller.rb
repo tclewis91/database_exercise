@@ -1,8 +1,10 @@
 class UsersController < ApplicationController
   def index
-   u = User.all
+    if param != nil
+      @u.select{user.first_name.split.include? == param user.first_name's'} #revamp this shit
+   @u = User.all
   render text:
-   u.map {|user| "#{user.first_name}, #{user.last_name}, #{user.occupation}, #{user.age}"}.join("<p><img src = 'http://rlv.zcache.com/basset_hound_puppy_postcard-r4f199e398ea2471f9d5ea03cf3c44953_vgbaq_8byvr_50.jpg'/>")
+   @u.map {|user| "#{user.first_name}, #{user.last_name}, #{user.occupation}, #{user.age}"}.join("<p><img src = 'http://rlv.zcache.com/basset_hound_puppy_postcard-r4f199e398ea2471f9d5ea03cf3c44953_vgbaq_8byvr_50.jpg'/>")
   end
 
   def show
@@ -13,4 +15,6 @@ class UsersController < ApplicationController
       render text: 'Error: 404 User Not Found', status: 404
     end
   end
+
 end
+
